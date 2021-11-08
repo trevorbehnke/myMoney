@@ -11,7 +11,7 @@ export default function Login() {
   };
 
   return (
-    <form class={styles["login-form"]} onSubmit={handleSubmit}>
+    <form className={styles["login-form"]} onSubmit={handleSubmit}>
       <h2>Login</h2>
       <label>
         <span>email:</span>
