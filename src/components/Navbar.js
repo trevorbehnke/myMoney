@@ -3,35 +3,35 @@ import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 // styles
-import styles from "./Navbar.module.css";
+// import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
   return (
-    <nav className={styles.navbar}>
-      <ul>
-        <li className={styles.title}>myMoneyApp</li>
+    <nav className="">
+      <ul className="flex justify-between items-center">
+        <li className="">myMoneyApp</li>
         {!user && (
-          <>
+          <div className="flex items-center">
             <li>
               <Link to="/login">Login</Link>
             </li>
             <li>
               <Link to="/signup">Signup</Link>
             </li>
-          </>
+          </div>
         )}
         {user && (
-          <>
-            <li>hello, {user.displayName}</li>
+          <div className="flex items-center">
+            <li className="">hello, {user.displayName}</li>
             <li>
-              <button className="btn" onClick={logout}>
+              <button className="" onClick={logout}>
                 Logout
               </button>
             </li>
-          </>
+          </div>
         )}
       </ul>
     </nav>

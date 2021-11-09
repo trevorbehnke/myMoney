@@ -1,29 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* base styles */
+html {
+  @apply m-4;
+}
+
 body {
-  font-family: Poppins, sans-serif;
-  margin: 0;
-  font-size: 1.1em;
+  @apply bg-gray-900 text-gray-300;
 }
-ul, li, p, h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
+
+a,
+button {
+  @apply border rounded text-gray-300 hover:bg-gray-700 hover:text-gray-200;
 }
-ul {
-  list-style-type: none;
+
+input {
+  @apply bg-transparent border;
 }
-.btn {
-  background: none;
-  border: 2px solid #1f9751;
-  padding: 6px 12px;
-  border-radius: 4px;
-  color: #1f9751;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1em;
-}
-.btn:hover {
-  background: #1f9751;
-  color: #fff;
+
+p {
+  /* @apply px-4; */
 }

@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+// import styles from "./Home.module.css";
 import { useFirestore } from "../../hooks/useFirestore";
 
 export default function TransactionList({ transactions }) {
@@ -6,12 +6,17 @@ export default function TransactionList({ transactions }) {
   console.log(response);
 
   return (
-    <ul className={styles.transactions}>
+    <ul className="flex flex-col w-48">
       {transactions.map((transaction) => (
-        <li key={transaction.id}>
-          <p className={styles.name}>{transaction.name}</p>
-          <p className={styles.amount}>${transaction.amount}</p>
-          <button onClick={() => deleteDocument(transaction.id)}>❌</button>
+        <li className="flex items-center justify-between" key={transaction.id}>
+          <p className="">{transaction.name}</p>
+          <p className="">${transaction.amount}</p>
+          <button
+            className=" border-0 m-0 p-0"
+            onClick={() => deleteDocument(transaction.id)}
+          >
+            🗑
+          </button>
         </li>
       ))}
     </ul>
