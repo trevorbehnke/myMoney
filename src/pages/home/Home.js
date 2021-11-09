@@ -17,13 +17,17 @@ export default function Home() {
   );
 
   return (
-    <div className="flex justify-between">
-      <div className="">
-        {error && <p>{error}</p>}
-        {documents && <TransactionList transactions={documents} />}
-      </div>
-      <div className="">
-        <TransactionForm uid={user.uid} />
+    <div className="flex h-screen">
+      <div className="m-auto  w-2/3">
+        <div className="flex justify-between items-center ">
+          <div className="">
+            {error && <p>{error}</p>}
+            {documents && <TransactionList transactions={documents} />}
+          </div>
+          <div className="">
+            <TransactionForm uid={user.uid} />
+          </div>
+        </div>
       </div>
     </div>
   );
