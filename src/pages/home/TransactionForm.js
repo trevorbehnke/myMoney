@@ -24,12 +24,13 @@ export default function TransactionForm({ uid }) {
   }, [response.success]);
 
   return (
-    <>
-      <h3>Add a Transaction</h3>
-      <form onSubmit={handleSubmit}>
+    <div className="w-48">
+      {/* <h3>Add a Transaction</h3> */}
+      <form className="flex flex-col" onSubmit={handleSubmit}>
         <label>
           <span>Transaction name:</span>
           <input
+            className="min-w-full"
             type="text"
             required
             onChange={(e) => setName(e.target.value)}
@@ -39,6 +40,7 @@ export default function TransactionForm({ uid }) {
         <label>
           <span>Amount ($):</span>
           <input
+            className="min-w-full"
             type="number"
             required
             onChange={(e) => setAmount(e.target.value)}
@@ -47,6 +49,6 @@ export default function TransactionForm({ uid }) {
         </label>
         <button>Add Transaction</button>
       </form>
-    </>
+    </div>
   );
 }
