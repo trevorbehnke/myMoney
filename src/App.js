@@ -9,7 +9,7 @@ import { useAuthContext } from "./hooks/useAuthContext";
 function App() {
   const { authIsReady, user } = useAuthContext();
   return (
-    <div className="container mx-auto min-h-screen">
+    <div className="container mx-auto min-h-screen p-4">
       {authIsReady && (
         <BrowserRouter>
           <Navbar />

@@ -15,8 +15,8 @@ export default function Login() {
   return (
     <form className="flex h-screen" onSubmit={handleSubmit}>
       <div className="m-auto">
-        <div className="flex flex-col w-96">
-          <h2>Login</h2>
+        <div className="flex flex-col w-96 ">
+          <h2 className="flex justify-center">Log In</h2>
           <label>
             <span>Email:</span>
             <input
@@ -35,9 +35,9 @@ export default function Login() {
               value={password}
             />
           </label>
-          {!isPending && <button className="">Login</button>}
+          {!isPending && <button className="border">Log In</button>}
           {isPending && (
-            <button className="" disabled>
+            <button className="border" disabled>
               Loading...
             </button>
           )}

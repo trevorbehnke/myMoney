@@ -4,22 +4,17 @@
 @tailwind utilities;
 
 html {
-  @apply m-4;
+  /* @apply m-4; */
 }
 
 body {
   @apply bg-gray-900 text-gray-300;
 }
 
-a,
 button {
-  @apply border rounded text-gray-300 hover:bg-gray-700 hover:text-gray-200;
+  @apply text-gray-300 hover:bg-gray-700 hover:text-gray-200;
 }
 
 input {
   @apply bg-transparent border;
-}
-
-p {
-  /* @apply px-4; */
 }

@@ -12,23 +12,23 @@ export default function Navbar() {
   return (
     <nav className="">
       <ul className="flex justify-between items-center">
-        <li className="">myMoneyApp</li>
+        <li className="">My Web App</li>
         {!user && (
-          <div className="flex items-center">
+          <div className="flex items-center w-32 justify-between">
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login">Log In</Link>
             </li>
             <li>
-              <Link to="/signup">Signup</Link>
+              <Link to="/signup">Sign Up</Link>
             </li>
           </div>
         )}
         {user && (
-          <div className="flex items-center">
-            <li className="">hello, {user.displayName}</li>
+          <div className="flex items-center w-40 justify-between">
+            <li className="">Hi, {user.displayName}!</li>
             <li>
               <button className="" onClick={logout}>
-                Logout
+                Log Out
               </button>
             </li>
           </div>
